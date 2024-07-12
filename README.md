@@ -11,17 +11,26 @@
 Основной файл, содержащий зависимости - **requirements.txt**
 
 #### Создание виртуального окружения
-```bash
-python -m venv env          # Windows
 
-python3 -m venv env         # Linux / MacOS
+Windows
+```bash
+python -m venv <my-env>
+```
+
+Linux / MacOS
+```bash
+python3 -m venv <my-env>
 ```
 
 #### Активация виртуального окружения
+Windows
 ```bash
-.\env\Scripts\activate      # Windows
+.\<my-env>\Scripts\activate
+```
 
-source ./env/bin/activate   # Linux / MacOS
+Linux / MacOS
+```bash
+source ./<my-env>/bin/activate
 ```
 
 #### Установка зависимостей проекта
@@ -76,34 +85,42 @@ poetry add requests
 poetry show
 ```
 
-### [Anaconda](https://python-poetry.org/)
+### [Conda](https://docs.anaconda.com/)
 
-Основной файл, содержащий зависимости - **pyproject.toml**
+Основной файл, содержащий зависимости - **environment.yaml**
 
 #### Создание виртуального окружения
 ```bash
-poetry init
+conda create --name <my-env>
+```
+
+#### Создание виртуального окружения с указанием версии Питона
+```bash
+conda create -n <my-env> python=3.9
 ```
 
 #### Активация виртуального окружения
 ```bash
-poetry shell
+conda activate <my-env>
 ```
 
 #### Установка зависимостей проекта
 ```bash
-poetry install
+conda env create -f environment.yaml
 ```
 
 #### Установка отдельных пакетов
 ```bash
-poetry add requests
+conda install requests
 ```
-Интересная особенность - poetry добавляет установленный пакет в pyproject.toml автоматически
 
 #### Просмотр установленных зависимостей проекта
 ```bash
-poetry show
+conda env list
 ```
 
+#### Создание файла environment.yaml
+```bash
+conda env export > environment.yaml
+```
 

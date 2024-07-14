@@ -88,7 +88,7 @@ poetry show
 
 ### [Conda](https://docs.anaconda.com/)
 
-Основной файл, содержащий зависимости - **environment.yaml**
+Основной файл, содержащий зависимости - **environment.yml**
 
 #### Создание виртуального окружения
 ```bash
@@ -107,7 +107,7 @@ conda activate <my-env>
 
 #### Установка зависимостей проекта
 ```bash
-conda env create -f environment.yaml
+conda env create -f environment.yml
 ```
 
 #### Установка отдельных пакетов
@@ -120,9 +120,9 @@ conda install requests
 conda list
 ```
 
-#### Создание файла environment.yaml
+#### Создание файла environment.yml
 ```bash
-conda env export > environment.yaml
+conda env export > environment.yml
 ```
 
 Особенность conda - можно использовать любое из созданных окружений вне зависимости от проекта

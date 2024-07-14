@@ -117,11 +117,17 @@ conda install requests
 
 #### Просмотр установленных зависимостей проекта
 ```bash
-conda env list
+conda list
 ```
 
 #### Создание файла environment.yaml
 ```bash
 conda env export > environment.yaml
+```
+
+Особенность conda - можно использовать любое из созданных окружений вне зависимости от проекта
+#### Просмотр созданных окружений
+```bash
+conda env list
 ```
 
